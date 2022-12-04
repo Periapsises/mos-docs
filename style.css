@@ -1,0 +1,65 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    background-color: rgb(35, 39, 46);
+    color: rgb(215, 218, 224);
+
+    display: flex;
+    flex-flow: row;
+}
+
+#sidebar {
+    flex: 260px 0;
+    padding: 32px;
+
+    background-color: rgb(44, 49, 60);
+}
+
+#logo {
+    width: 120px;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 2.3rem;
+}
+
+#options {
+    margin-top: 40px;
+}
+
+#options > a {
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+
+    display: block;
+    margin: 8px 0;
+}
+
+#options > a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+#options > a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+#options > a > * {
+    vertical-align: middle;
+}
+
+#container {
+    flex: 1 1;
+    display: flex;
+    flex-flow: column;
+}
+
+#header {
+    flex: 100px 0;
+}
