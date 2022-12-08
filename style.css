@@ -59,6 +59,7 @@ body {
 #containers {
     padding: 40px 80px;
     border-top: 2px solid rgb(41, 45, 53);
+    border-bottom: 2px solid rgb(41, 45, 53);
 }
 
 .container {
