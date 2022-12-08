@@ -64,3 +64,17 @@ body {
 #content {
     padding: 20px;
 }
+
+table, th, td {
+    border: 1px solid rgb(154, 158, 167);
+    border-collapse: collapse;
+}
+
+table * {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+
+    padding: 8px;
+    min-width: 40px;
+    white-space: nowrap;
+}

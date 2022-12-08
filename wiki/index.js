@@ -1,7 +1,7 @@
 const defaultCategory = 'instructions';
 const defaultSection = 'summary';
 
-async function setContent(url) {
+async function getContent(url) {
     let response = await fetch(url);
 
     if (response.status != 200)
@@ -11,13 +11,20 @@ async function setContent(url) {
     return data;
 }
 
+async function setContent(category, section) {
+    let html = await getContent('./' + category + '/' + section + '.html');
+    document.getElementById('content').innerHTML = html;
+}
+
 function onListItemClicked(category, section) {
     let location = window.location;
     let url = location.protocol + '//' + location.host + location.pathname + '?category=' + category + '&section=' + section;
     window.history.pushState({ path: url }, '', url);
+
+    setContent(category, section);
 }
 
-async function onContentLoaded() {
+function onContentLoaded() {
     let lists = document.getElementsByTagName('ul');
 
     for (let list of lists) {
@@ -39,8 +46,7 @@ async function onContentLoaded() {
     let category = params.get('category') || defaultCategory;
     let section = params.get('section') || defaultSection;
 
-    let html = await setContent('./' + category + '/' + section + '.html');
-    document.getElementById('content').innerHTML = html;
+    setContent(category, section);
 }
 
 window.addEventListener('DOMContentLoaded', onContentLoaded);
