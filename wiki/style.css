@@ -65,8 +65,12 @@ body {
     padding: 20px;
 }
 
+table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 table, th, td {
-    border: 1px solid rgb(154, 158, 167);
+    border: 1px solid rgb(30, 31, 34);
     border-collapse: collapse;
 }
 
@@ -77,4 +81,39 @@ table * {
     padding: 8px;
     min-width: 40px;
     white-space: nowrap;
+}
+
+td {
+    background-color: rgb(109, 107, 75);
+}
+
+th {
+    font-weight: 600;
+    text-align: center;
+}
+
+.nibbles {
+    background-color: rgb(109, 75, 75);
+}
+
+.low-bits {
+    background-color: rgb(75, 109, 77);
+}
+
+.high-bits {
+    background-color: rgb(75, 87, 109);
+}
+
+#nibble-corner {
+    background-color: rgb(52, 57, 70);
+}
+
+.attributions {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+}
+
+.attributions a:link,
+.attributions a:visited {
+    color: rgb(98, 119, 173);
 }
