@@ -11,24 +11,6 @@ body {
     display: flex;
 }
 
-h1 {
-    font-size: 2.3em;
-    font-weight: 600;
-    margin-top: 5rem;
-    border-bottom: 2px solid rgb(221, 162, 84);
-}
-
-p {
-    font-family: 'Montserrat';
-    font-size: 1.4rem;
-    margin: 2rem 0;
-}
-
-a:link,
-a:visited {
-    color: rgb(221, 162, 84);
-}
-
 #sidebar {
     padding: 20px;
     float: left;
