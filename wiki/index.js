@@ -29,14 +29,10 @@ function onContentLoaded() {
 
     for (let list of lists) {
         let category = list.getAttribute('category');
-        let index = 0;
 
         for (let item of list.children) {
             let section = item.innerText.toLowerCase().replace(' ', '-');
             item.onclick = () => onListItemClicked(category, section);
-
-            item.className = (index % 2 == 0) ? 'list even' : 'list odd';
-            index++;
         }
     }
 

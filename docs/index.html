@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="/scripts/markdown.js"></script>
+    <script src="/scripts/accordion.js"></script>
 </head>
 
 <body>
@@ -22,13 +23,44 @@
         <h1>MOS <span style="color: rgb(116, 127, 139); font-size: 1.8rem;">Docs</span></h1>
         <textarea id="search" placeholder="Quick search" rows="1"></textarea>
 
-        <div id="navigation">
-            <details open>
-                <summary>Resources</summary>
+        <div id="navbar">
+            <div class="category">
+                <h3>Resources</h3>
                 <ul>
-                    <li>Home</li>
+                    <li><a class="item">Home</a></li>
                 </ul>
-            </details>
+            </div>
+
+            <div class="category">
+                <h3>Globals</h3>
+                <ul>
+                    <li><a class="item"><img class="icon sh">Mos</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Methods</h3>
+                <details>
+                    <summary><a class="item"><img class="icon cl">FileSystem</a></summary>
+                    <ul class="list-margin content">
+                        <li><a class="item"><img class="icon cl">Verify</a></li>
+                        <li><a class="item"><img class="icon cl">HasAllowedExtension</a></li>
+                        <li><a class="item"><img class="icon cl">GetSanitizedPath</a></li>
+                        <li><a class="item"><img class="icon cl">GetDirtyPath</a></li>
+                        <li><a class="item"><img class="icon cl">GetCompiledPath</a></li>
+                        <li><a class="item"><img class="icon cl">Exists</a></li>
+                        <li><a class="item"><img class="icon cl">Open</a></li>
+                        <li><a class="item"><img class="icon cl">Write</a></li>
+                        <li><a class="item"><img class="icon cl">Read</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><a class="item"><img class="icon sv">Memory</a></summary>
+                    <ul class="list-margin content">
+                        <li><a class="item"><img class="icon sv">Create</a></li>
+                    </ul>
+                </details>
+            </div>
         </div>
     </div>
     <div id="content">
@@ -40,7 +72,7 @@
         </p>
 
         <h1>Contributing</h1>
-        <p>You can contribute to the docs on the <a href="https://github.com/Periapsises/mos-pages">repository</a>.</p>
+        <p>You can contribute to the docs on <a href="https://github.com/Periapsises/mos-pages">GitHub</a>.</p>
     </div>
 </body>
 
