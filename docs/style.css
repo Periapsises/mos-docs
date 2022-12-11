@@ -1,24 +1,33 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    font-size: 10px;
+#content {
+    flex: 1 1 auto;
+    padding: 2.6rem;
 }
 
-body {
+#search {
     background-color: rgb(35, 39, 46);
     color: rgb(215, 218, 224);
+    border: none;
 
-    display: flex;
+    padding: 0.6rem;
+    margin-bottom: 2rem;
+
+    font-family: 'Montserrat';
+    resize: none;
 }
 
-#sidebar {
-    padding: 20px;
-    float: left;
-    width: 20%;
-
-    background-color: rgb(44, 49, 60);
+.icon {
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
-#sidebar > h1 {
-    font-size: 2.4rem;
+.icon.sh {
+    content: url("/images/shared.svg");
+}
+
+.icon.sv {
+    content: url("/images/server.svg");
+}
+
+.icon.cl {
+    content: url("/images/client.svg");
 }

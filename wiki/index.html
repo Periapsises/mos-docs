@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mos Wiki</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/default.css">
     <link rel="stylesheet" href="style.css">
 
     <script src="index.js"></script>
@@ -20,29 +18,30 @@
 <body>
     <div id="sidebar">
         <img src="/images/mos.svg" style="width: 180px;">
-        <h1>MOS <span style="color: rgb(116, 127, 139); font-size: 1.8rem;">Wiki</span></h1>
-        <div id="navigation">
-            <details open>
-                <summary>Instructions</summary>
+        <h1>Mos <span>Wiki</span></h1>
+
+        <div id="navbar">
+            <div class="category">
+                <h3>Instructions</h3>
                 <ul category="instructions">
-                    <li>Summary</li>
+                    <li><a class="item">Summary</a></li>
                 </ul>
-            </details>
-            <details open>
-                <summary>Addressing Modes</summary>
+            </div>
+            <div class="category">
+                <h3>Addressing Modes</h3>
                 <ul category="addressing-modes">
-                    <li>Accumulator</li>
-                    <li>Absolute</li>
-                    <li>Absolute,X</li>
-                    <li>Absolute,Y</li>
-                    <li>Immediate</li>
-                    <li>Implied</li>
-                    <li>Indirect</li>
-                    <li>X,Indirect</li>
-                    <li>Indirect,Y</li>
-                    <li>Relative</li>
+                    <li><a class="item">Accumulator</a></li>
+                    <li><a class="item">Absolute</a></li>
+                    <li><a class="item">Absolute,X</a></li>
+                    <li><a class="item">Absolute,Y</a></li>
+                    <li><a class="item">Immediate</a></li>
+                    <li><a class="item">Implied</a></li>
+                    <li><a class="item">Indirect</a></li>
+                    <li><a class="item">X,Indirect</a></li>
+                    <li><a class="item">Indirect,Y</a></li>
+                    <li><a class="item">Relative</a></li>
                 </ul>
-            </details>
+            </div>
         </div>
     </div>
     <div id="content"></div>

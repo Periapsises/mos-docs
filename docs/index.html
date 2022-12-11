@@ -8,17 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mos Docs</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt">
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/default.css">
+    <link rel="stylesheet" href="/style/markdown.css">
     <link rel="stylesheet" href="style.css">
+
+    <script src="/scripts/markdown.js"></script>
+    <script src="/scripts/accordion.js"></script>
 </head>
 
 <body>
     <div id="sidebar">
         <img src="/images/mos.svg" style="width: 180px;">
         <h1>MOS <span style="color: rgb(116, 127, 139); font-size: 1.8rem;">Docs</span></h1>
+        <textarea id="search" placeholder="Quick search" rows="1"></textarea>
+
+        <div id="navbar">
+            <div class="category">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a class="item">Home</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Globals</h3>
+                <ul>
+                    <li><a class="item"><img class="icon sh">Mos</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Methods</h3>
+                <details>
+                    <summary><a class="item"><img class="icon cl">FileSystem</a></summary>
+                    <ul class="list-margin content">
+                        <li><a class="item"><img class="icon cl">Verify</a></li>
+                        <li><a class="item"><img class="icon cl">HasAllowedExtension</a></li>
+                        <li><a class="item"><img class="icon cl">GetSanitizedPath</a></li>
+                        <li><a class="item"><img class="icon cl">GetDirtyPath</a></li>
+                        <li><a class="item"><img class="icon cl">GetCompiledPath</a></li>
+                        <li><a class="item"><img class="icon cl">Exists</a></li>
+                        <li><a class="item"><img class="icon cl">Open</a></li>
+                        <li><a class="item"><img class="icon cl">Write</a></li>
+                        <li><a class="item"><img class="icon cl">Read</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><a class="item"><img class="icon sv">Memory</a></summary>
+                    <ul class="list-margin content">
+                        <li><a class="item"><img class="icon sv">Create</a></li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1>Welcome!</h1>
+        <p>Welcome to the Mos Documentation</p>
+        <p>
+            Contrarily to the <a href="../wiki">wiki</a>, the docs contain information about the addon code such as some standards used and the public API.<br>
+            You can also view the source code on <a href="https://github.com/Periapsises/mos">GitHub</a> for an in-depth dive.
+        </p>
+
+        <h1>Contributing</h1>
+        <p>You can contribute to the docs on <a href="https://github.com/Periapsises/mos-pages">GitHub</a>.</p>
     </div>
 </body>
 
