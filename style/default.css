@@ -13,6 +13,11 @@ body {
     display: flex;
 }
 
+#content {
+    flex: 1 1 auto;
+    padding: 4rem;
+}
+
 details > summary {
     padding-left: 2.2rem;
     list-style: none;
