@@ -15,19 +15,21 @@
     resize: none;
 }
 
-.icon {
+.icon::before {
     width: 1.6rem;
     height: 1.6rem;
+    margin: auto 0;
+    margin-right: 0.6rem;
 }
 
-.icon.sh {
+.icon.sh::before {
     content: url("/images/shared.svg");
 }
 
-.icon.sv {
+.icon.sv::before {
     content: url("/images/server.svg");
 }
 
-.icon.cl {
+.icon.cl::before {
     content: url("/images/client.svg");
 }

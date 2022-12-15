@@ -71,7 +71,9 @@ ul > li {
 }
 
 .category .item > * {
-    margin: auto 0.4rem auto 0;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .category .item:hover {
@@ -97,6 +99,7 @@ body::before {
     width: 20%;
     height: 100%;
     position: fixed;
+    overflow-y: scroll;
 
     background-color: rgb(44, 49, 60);
 }
