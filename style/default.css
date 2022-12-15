@@ -25,10 +25,6 @@ body {
     padding: 4rem;
 }
 
-ul>li {
-    display: flex;
-}
-
 /* Category header */
 .category>h3 {
     font-size: 1.6rem;
@@ -58,6 +54,7 @@ ul>li {
     border-radius: 0.4rem;
 }
 
+/* Compensates the sidebar's width */
 body::before {
     content: '';
     width: var(--sidebar-width);
