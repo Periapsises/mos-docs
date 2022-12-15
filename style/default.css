@@ -83,10 +83,20 @@ ul > li {
     margin-bottom: 1rem;
 }
 
+body::before {
+    content: '';
+    min-width: 20%;
+    height: 100%;
+    padding: 2rem;
+    display: block;
+}
+
 #sidebar {
     float: left;
     padding: 2rem;
     width: 20%;
+    height: 100%;
+    position: fixed;
 
     background-color: rgb(44, 49, 60);
 }
@@ -125,4 +135,21 @@ ul > li {
 
 .list-margin {
     margin-left: 3rem;
+}
+
+::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(35, 39, 46);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(62, 69, 82);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
