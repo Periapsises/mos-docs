@@ -7,11 +7,28 @@
     font-style: normal;
 }
 
+.markdown {
+    padding-bottom: 4rem;
+}
+
 .markdown h1 {
-    font-size: 2.3em;
+    font-size: 2.4em;
     font-weight: 600;
     margin-top: 5rem;
+    margin-bottom: 2rem;
     border-bottom: 2px solid rgb(221, 162, 84);
+}
+
+.markdown h2 {
+    font-size: 2rem;
+}
+
+.markdown h3 {
+    font-size: 1.8rem;
+}
+
+.markdown h4 {
+    font-size: 1.6rem;
 }
 
 .markdown p {
@@ -26,12 +43,49 @@
 }
 
 .markdown .code {
+    position: relative;
+
     background-color: rgb(44, 49, 60);
-    padding: 0 1.6rem;
+    padding: 1.6rem;
     border-radius: 4px;
+
+    min-height: 2.6rem;
 
     font-family: 'JetBrainsMono';
     font-size: 1.6rem;
+    line-height: 2rem;
 
     white-space: pre;
+}
+
+.markdown .code .button {
+    position: absolute;
+    display: flex;
+    content: '';
+
+    padding: 0.8rem;
+    width: 2.6rem;
+    height: 2.6rem;
+
+    top: 1rem;
+    right: 1rem;
+
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.markdown .code .button:hover {
+    background-color: rgb(69, 77, 94);
+}
+
+.markdown .code .button:active {
+    background-color: rgb(101, 110, 131);
+}
+
+.markdown .code .button::before {
+    content: '';
+    flex: 1 1 auto;
+
+    background-image: url('/images/content_copy.png');
+    background-size: cover;
 }

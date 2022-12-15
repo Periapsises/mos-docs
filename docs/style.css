@@ -15,19 +15,25 @@
     resize: none;
 }
 
-.icon {
-    width: 1.6rem;
-    height: 1.6rem;
+.icon::before {
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.6rem;
 }
 
-.icon.sh {
-    content: url("/images/shared.svg");
+.icon.sh::before {
+    content: '';
+    background-image: url("/images/shared.svg");
 }
 
-.icon.sv {
-    content: url("/images/server.svg");
+.icon.sv::before {
+    content: '';
+    background-image: url("/images/server.svg");
 }
 
-.icon.cl {
-    content: url("/images/client.svg");
+.icon.cl::before {
+    content: '';
+    background-image: url("/images/client.svg");
 }

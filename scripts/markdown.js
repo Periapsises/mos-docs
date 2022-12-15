@@ -1,13 +1,13 @@
 const keywords = [
     'local', 'function', 'do', 'while', 'for', 'in', 'repeat',
-    'if', 'end', 'not', 'nil', 'false', 'true', 'and', 'or'
+    'if', 'then', 'end', 'not', 'nil', 'false', 'true', 'and', 'or'
 ];
 
 const globals = [
     '_G', '_R', 'CLIENT', 'SERVER',
     'ipairs', 'pairs', 'include',
     'Color', 'Vector', 'Angle',
-    'math', 'print'
+    'math', 'print', 'hook'
 ];
 
 const patterns = [
@@ -15,7 +15,9 @@ const patterns = [
     { type: 'string', regex: /^".*?"/is },
     { type: 'variable', regex: /^\w+/is },
     { type: 'newline', regex: /^\n+/is },
-    { type: 'parenthesis', regex: /^[\(\)]/is }
+    { type: 'parenthesis', regex: /^[\(\)]/is },
+    { type: 'comment', regex: /^--[^\n]*/is },
+    { type: 'punctuation', regex: /^[.:,]/is }
 ];
 
 class Token {
@@ -66,7 +68,10 @@ function parseCodeBlocks() {
     let blocks = document.getElementsByClassName('code');
 
     for (let block of blocks) {
-        let tokens = parse(block.innerHTML);
+        let code = block.innerHTML;
+        code = code.trim().replace(/^\s+|\s+$/g, '');
+
+        let tokens = parse(code);
         block.innerHTML = '';
 
         for (let token of tokens) {
@@ -74,17 +79,28 @@ function parseCodeBlocks() {
             element.innerHTML = (token.value == '\n') ? '<br>' : token.value;
 
             if (keywords.indexOf(token.value) != -1) {
-                element.style = 'color: #C678DD;';
+                element.style.color = '#C678DD';
             } else if (globals.indexOf(token.value) != -1) {
-                element.style = 'color: #E5C07B;'
+                element.style.color = '#E5C07B'
             } else if (token.type === 'string') {
-                element.style = 'color: #98C379;'
+                element.style.color = '#98C379'
             } else if (token.type === 'variable') {
-                element.style = 'color: #61AFEF;'
+                element.style.color = '#61AFEF'
+            } else if (token.type === 'comment') {
+                element.style.color = '#7F848E';
             }
 
             block.appendChild(element);
         }
+
+        let button = document.createElement('a');
+        button.className = 'button';
+
+        button.addEventListener('click', () => {
+            navigator.clipboard.writeText(code);
+        });
+        
+        block.appendChild(button);
     }
 }
 
