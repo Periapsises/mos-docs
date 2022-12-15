@@ -16,20 +16,24 @@
 }
 
 .icon::before {
-    min-width: 1.6rem;
-    height: 1.6rem;
-    margin: auto 0;
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-right: 0.6rem;
 }
 
 .icon.sh::before {
-    content: url("/images/shared.svg");
+    content: '';
+    background-image: url("/images/shared.svg");
 }
 
 .icon.sv::before {
-    content: url("/images/server.svg");
+    content: '';
+    background-image: url("/images/server.svg");
 }
 
 .icon.cl::before {
-    content: url("/images/client.svg");
+    content: '';
+    background-image: url("/images/client.svg");
 }
