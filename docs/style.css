@@ -16,7 +16,7 @@
 }
 
 .icon::before {
-    width: 1.6rem;
+    min-width: 1.6rem;
     height: 1.6rem;
     margin: auto 0;
     margin-right: 0.6rem;

@@ -1,0 +1,42 @@
+.animated>summary {
+    list-style: none;
+    position: relative;
+}
+
+.animated>summary::-webkit-details-marker {
+    display: none;
+}
+
+.animated.arrow>summary,
+.animated.noarrow>summary {
+    padding-left: 2.2rem;
+}
+
+.animated.arrow>summary::before {
+    content: '';
+    border-width: 0.4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    transform: rotate(0);
+    transform-origin: 0.2rem 50%;
+    transition: 0.25s transform ease;
+}
+
+.animated.arrow[open]>summary::before {
+    transform: rotate(90deg);
+}
+
+.animated .content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.animated .content::-webkit-scrollbar {
+    display: none;
+}
