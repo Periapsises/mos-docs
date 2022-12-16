@@ -99,6 +99,7 @@
     font-size: 1.6rem;
     line-height: 2rem;
     display: flex;
+    white-space: pre;
 }
 
 .markdown .definition span {
@@ -124,19 +125,23 @@
     background-image: url('/images/server.svg');
 }
 
-.markdown .method-list * {
+.markdown .member-list * {
     font-family: 'JetBrainsMono';
     margin-top: 1.4rem;
     margin-bottom: 0.6rem;
 }
 
-.markdown .method-list p.description {
+.markdown .member-list p.description {
     font-family: 'Montserrat';
     color: rgb(101, 110, 131);
     margin-top: 0;
     margin-left: 2rem;
 }
 
-.markdown .method-list .method {
+.markdown .member-list .member {
     color: rgb(221, 162, 84);
+}
+
+.markdown .link {
+    color: rgb(97, 175, 239);
 }
