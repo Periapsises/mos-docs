@@ -89,3 +89,59 @@
     background-image: url('/images/content_copy.png');
     background-size: cover;
 }
+
+.markdown .definition {
+    padding: 2rem;
+    border-radius: 0.4rem;
+
+    background-color: rgb(69, 77, 94);
+    font-family: 'JetBrainsMono';
+    font-size: 1.6rem;
+    line-height: 2rem;
+    display: flex;
+    white-space: pre;
+}
+
+.markdown .definition span {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.markdown .definition span.client {
+    background-image: url('/images/client.svg');
+}
+
+.markdown .definition span.shared {
+    background-image: url('/images/shared.svg');
+}
+
+.markdown .definition span.server {
+    background-image: url('/images/server.svg');
+}
+
+.markdown .member-list * {
+    font-family: 'JetBrainsMono';
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.markdown .member-list p.description {
+    font-family: 'Montserrat';
+    color: rgb(101, 110, 131);
+    margin-top: 0;
+    margin-left: 2rem;
+}
+
+.markdown .member-list .member {
+    color: rgb(221, 162, 84);
+}
+
+.markdown .link {
+    color: rgb(97, 175, 239);
+}
